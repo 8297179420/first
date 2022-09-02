@@ -1,0 +1,77 @@
+class Example 
+{ 
+    static void main(String[] args)
+    { 
+//Example of a int datatype 
+int x=5; 
+//Example of a long datatype 
+long y=100L; 
+//Example of a floating point datatype 
+float a=10.56f; 
+//Example of a double datatype 
+double b=10.5e40; 
+//Example of a BigInteger datatype 
+BigInteger bi=30g; 
+//Example of a BigDecimal datatype 
+BigDecimal bd=3.5g; 
+println(x); 
+println(y); 
+println(a); 
+println(b); 
+println(bi);
+println(bd); } }
+
+----------------------------------------
+
+class Example 
+{ 
+static void main(String[] args) 
+{ 
+// Defining a variable in lowercase 
+int x=5; 
+// Defining a variable in uppercase 
+int X=6; 
+// Defining a variable with the underscore in it's name 
+def _Name="Joe"; 
+println(x); 
+println(X); 
+println(_Name); 
+} 
+}
+
+--------------------
+class Example 
+{ 
+static void main(String[] args) 
+{ 
+//Initializing 2 variables 
+int x=5; 
+int X=6; 
+//Printing the value of the variables to the console 
+println("The value of x is " + x + "The value of X is " + X); 
+} 
+}
+---------------------------------
+
+class Example 
+{ static void main(String[] args) 
+{ 
+/ Initializing 3 variables 
+def x=5; 
+def y=10;
+def z=8; 
+//Performing addition of 2 operands 
+println(x+y); 
+//Subtracts second operand from the first 
+println(x-y); 
+//Multiplication of both operands
+println(x*y); 
+//Division of numerator by denominator 
+println(z/x); 
+//Modulus Operator and remainder of after an integer/float division 
+println(z%x); 
+//Incremental operator 
+println(x++); 
+//Decrementing operator println(x--); 
+} 
+}
