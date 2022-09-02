@@ -1,0 +1,83 @@
+import spock.lang.*
+
+class ReverseStringSpec extends Specification {
+
+    def "An empty string"() {
+        expect:
+        ReverseString.reverse(value) == expected
+
+        where:
+        value || expected
+        ''    || ''
+    }
+
+    //@Ignore
+    def "A word"() {
+        expect:
+        ReverseString.reverse(value) == expected
+
+        where:
+        value   || expected
+        'robot' || 'tobor'
+    }
+
+    //@Ignore
+    def "A capitalized word"() {
+        expect:
+        ReverseString.reverse(value) == expected
+
+        where:
+        value   || expected
+        'Ramen' || 'nemaR'
+    }
+
+    //@Ignore
+    def "A sentence with punctuation"() {
+        expect:
+        ReverseString.reverse(value) == expected
+
+        where:
+        value         || expected
+        "I'm hungry!" || "!yrgnuh m'I"
+    }
+
+    //@Ignore
+    def "A palindrome"() {
+        expect:
+        ReverseString.reverse(value) == expected
+
+        where:
+        value     || expected
+        'racecar' || 'racecar'
+    }
+
+    //@Ignore
+    def "An even-sized word"() {
+        expect:
+        ReverseString.reverse(value) == expected
+
+        where:
+        value    || expected
+        'drawer' || 'reward'
+    }
+}
+
+class ReverseString {
+    static String reverse(String value) {
+        def  i
+        def reverse=''
+        for (i=(value.length()-1);i>=0;i--){
+            reverse=reverse.concat(value[i])
+        }
+        return reverse
+        throw new UnsupportedOperationException('method not implemented.')
+    }
+    static void main(String[] args){
+		reverse("")
+		reverse("robot")
+		reverse("Ramen")
+        reverse("I'm hungry!")
+		reverse("racecar")
+		reverse("drawer")
+    }
+}
